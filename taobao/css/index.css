@@ -1,0 +1,28 @@
+*{margin: 0;padding: 0;}
+	
+html{font:12px/1.5 tahoma,arial}
+li{list-style: none;}
+a{text-decoration: none;}
+.fl{float: left;}
+.fr{float:  right;}
+//导航栏开始
+#headerr{ background:#f1f1f1 ;border-bottom: 1px solid #eee;}
+#header{width: 1190px; margin: 0 auto;}
+#header{height: 35px;}
+#header a{color: #6c6c6c;}
+/*#login:hover{color: #FF4204;}*/
+#header .fl a:hover{color: #FF4204}
+#header .fl a{text-align: center;line-height: 35px;}
+#header .login a{color:#ff4204 ;}
+#header .register{margin: 0 20px 0 9px;}
+#header .header_r{width: 590px;}
+.header_r .fl a{display: block;padding:0 7px  ;border-left: 1px solid #F1F1F1;border-right: 1px solid #F1F1F1;background: #fffff;}
+.header_r>li:hover>a{border-left: 1px solid #e4dde4;border-right: 1px solid #e4dde4;}
+.header_r_select{width: 7px; height: 35px; margin-left: 10px; background: url(../img/xiala2.png)no-repeat center ;background-size:100%;}
+.header_r>li{position: relative;}
+.header_r>li:hover .select_section{display: block;}
+.select_section{position: absolute;top: 35px;left: 0; display: none;padding: 7px 0;}
+.select_section li{padding: 7px;height: 20px; white-space: nowrap;}
+
+
+//导航栏结束
