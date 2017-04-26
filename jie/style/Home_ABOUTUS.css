@@ -1,0 +1,552 @@
+/*整个布局的背景颜色body的*/
+.aboutus_color{
+    background: #f2f2f2 url("../images/bg_body2.png") repeat-x ;
+}
+a{
+    text-decoration: none;
+}
+/*首页*/
+/*移动*/
+
+/*顶部部分*/
+.home_header{
+    width: 100%;
+    height: 63px;
+    line-height: 63px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    background: url(../images/bg_head.png) repeat-x;
+}
+.home_header_container{
+    margin: auto;
+    text-align: left;
+    width: 935px;
+}
+.home_header_container_l{
+    width:182px ;
+    height: 38px;
+    float: left;
+    overflow: hidden;
+    margin-top: 8px;
+    position: relative;
+    /*display: none;*/
+}
+.home_logoa{
+    width: 180px;
+    height: 35px;
+    background: url(../images/logo.png) no-repeat;
+    position: absolute;
+    /*transition: height   2s;*/
+}
+.home_logoa1{
+    width: 180px;
+    height: 35px;
+    background: url(../images/logo.png) no-repeat 0 -38px;
+    opacity: 0;
+    position: absolute;
+    /*transition: height   2s;*/
+}
+.home_logoa1:hover{
+    opacity: 100;
+    transition: opacity 2s;
+}
+
+.home_header_container_r{
+    height: 40px;
+    float: right;
+    margin-top: 8px;
+    margin-right: -20px;
+    font-size: 15px;
+    /*margin-right: 4px;*/
+}
+.home_header_container_r ul{
+    list-style: none;
+}
+.home_header_container_r ul li{
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    padding-right: 2px;
+    display: inline;
+    margin-right: 40px;
+}
+#home_header_container_r_c{
+    color: #BFF52C;
+}
+.home_header_container_r ul li a{
+    height: 40px;
+    text-decoration: none;
+    color: white;
+}
+.home_header_container_r ul li a:hover{
+    color:#BFF52C;
+    transition: color 2s;
+}
+/*移动*/
+#main {
+    background: #F2F2F2;
+}
+#con {
+    padding-bottom: 270px;
+}
+.bg{
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    background: url("../images/bg_banner.jpg")  repeat-x;
+}
+.font{
+    width: 300px;
+    height: 50px;
+    position: relative;
+    top: 95px;
+    left: -131px;
+    margin:  0px auto;
+}
+/*中间部分*/
+/*.aboutus_centre_center{*/
+    /*width: 100%;*/
+    /*padding-top: 106px;*/
+    /*background: url(../images/bg_banner.jpg) no-repeat center top;*/
+/*}*/
+/*上面*/
+.aboutus_centre_top{
+    height: 130px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+/*下面*/
+.aboutus_centre_down{
+    width: 100%;
+    height: 35px;
+    background: url("../images/nav2.png") ;
+}
+/*去点下划线的中间布局*/
+.aboutus_centre_down div a{
+    text-decoration: none;
+    color:#787878;
+}
+.aboutus_centre_down div a:hover{
+    color:lawngreen;
+    transition: color 2s;
+}
+
+/*用于剧中的div*/
+.aboutus_centre_down div{
+    width: 935px;
+    height: 35px;
+    margin: auto;
+    line-height: 35px;
+}
+/*右边*/
+.aboutus_centre_down div ul li{
+    float: left;
+    padding-left: 11px;
+    margin-left: 18px;
+}
+.aboutus_centre_lef1{
+    background: url("../images/nav2_s.png") no-repeat left center;
+}
+.aboutus_centre_lef2{
+    background: url("../images/nav2_c.png") no-repeat left center;
+}
+/*右边*/
+.aboutus_centre_rin{
+    float: right;
+}
+/*局部中间布局*/
+.aboutus_large_center{
+    margin: auto;
+    text-align: center;
+    width: 935px;
+}
+/*第一部分*/
+.aboutus_large_top{
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+.aboutus_aboutusbannert{
+    background: url("../images/about_banner_bg_top.png") no-repeat center top;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    z-index: 300;
+    left: 0;
+    top: 97px;
+}
+/*链接拉伸*/
+/*ABOUTS的部分*/
+.aboutus_large{
+    width: 93px;
+    height: 65px;
+    bottom: -12px;
+    left: 270px;
+    position: absolute;
+    transition:height 0.5s;
+}
+.aboutus_a1{
+    background: url("../images/us_btn.png") no-repeat ;
+}
+.aboutus_a2{
+    background: url("../images/us_btn.png") no-repeat  -104px 0;
+    left: 374px;
+}
+.aboutus_a3{
+    height: 90px;
+    background: url("../images/us_btn.png") no-repeat -207px -100px;
+    left: 478px;
+}
+.aboutus_a4{
+    background: url("../images/us_btn.png") no-repeat -309px 0;
+    left: 582px;
+}
+/*1.html部分*/
+.aboutus_b1{
+    height: 90px;
+    background: url("../images/us_btn.png")no-repeat 0 -100px;
+}
+.aboutus_b2{
+    background: url("../images/us_btn.png") no-repeat  -104px 0;
+    left: 374px;
+}
+.aboutus_b3{
+    background: url("../images/us_btn.png") no-repeat -207px 0px;
+    left: 478px
+}
+.aboutus_b4{
+    background: url("../images/us_btn.png") no-repeat -309px 0;
+    left: 582px;
+}
+/*2.html部分*/
+.aboutus_c1{
+    background: url("../images/us_btn.png")no-repeat;
+}
+.aboutus_c2{
+    height: 90px;
+    background: url("../images/us_btn.png") no-repeat  -104px -100px;
+    left: 374px;
+}
+.aboutus_c3{
+    background: url("../images/us_btn.png") no-repeat -207px 0;
+    left: 478px
+}
+.aboutus_c4{
+    background: url("../images/us_btn.png") no-repeat -309px 0;
+    left: 582px;
+}
+/*4.html部分*/
+.aboutus_d1{
+    background: url("../images/us_btn.png")no-repeat;
+}
+.aboutus_d2{
+    background: url("../images/us_btn.png") no-repeat  -104px 0;
+    left: 374px;
+}
+.aboutus_d3{
+    background: url("../images/us_btn.png") no-repeat -207px 0;
+    left: 478px
+}
+.aboutus_d4{
+    height: 90px;
+    background: url("../images/us_btn.png") no-repeat -309px -100px;
+    left: 582px;
+}
+
+
+/*第二部分*/
+.aboutus_large_cen{
+    width: 935px;
+    margin-top:12px;
+    position: relative;
+}
+/*图片部分*/
+.aboutus_f1{
+    float: left;
+    display: inline;
+    margin-left: 25px;
+}
+.aboutus_f2{
+    float: right;
+    display: inline;
+    margin: 3px 368px 0 0;
+}
+/*文字部分*/
+.aboutus_character{
+    width: 545px;
+    margin: 10px 46px 0 0;
+    line-height: 23px;
+    color: #808080;
+    font-size: 11px;
+    float: right;
+    display: inline;
+    text-align: left;
+}
+/*第三部分*/
+.aboutus_large_cen2{
+    margin-top: 22px;
+    position: relative;
+    line-height: 23px;
+}
+.aboutus_large_text1{
+    float: left;
+    display: inline;
+    width: 260px;
+    margin-left: 5px;
+    padding: 0 23px 0 23px;
+    text-align: left;
+    background: url("../images/about_shu.png") right top repeat-y;
+}
+
+.aboutus_large_text1 img{
+    text-align: left;
+}
+.aboutus_large_text1 p{
+    color:  #808080;
+    font-size: 11px;
+}
+/*浮动的标记*/
+.aboutus_pos{
+    position: absolute;
+    width: 27px;
+    height: 14px;
+    line-height: 14px;
+    background: url("../images/aboutus_up.png") no-repeat;
+    top:-13px;
+    left: 152px;
+}
+.aboutus_pos2{
+    position: absolute;
+    width: 80px;
+    height: 87px;
+    background: url("../images/aboutus_up2.png");
+    top: -13px;
+   right: 65px;
+}
+/*第四部分上端*/
+.aboutus_back{
+    height: 81px;
+    margin-top: 22px;
+    background: url("../images/about_b3.png") no-repeat ;
+    background-position-x: 50px;
+}
+/*第四部分*/
+.aboutus_large_bot{
+    margin-bottom: 30px;
+    line-height: 23px;
+}
+.aboutus_offal_text1{
+    float: left;
+    width: 260px;
+    padding-left: 23px;
+    padding-right: 23px;
+    margin-left: 5px;
+    text-align: left;
+    line-height: 23px;
+    background: url("../images/about_shu.png") right top repeat-y;
+}
+.aboutus_offal_text1 a{
+    line-height: 400%;
+    color:#323232;
+}
+.aboutus_offal_text1 a:hover{
+    text-decoration:none;
+    color: lightgreen;
+}
+
+
+
+/*五个图片链接*/
+.aboutus_queen_locality{
+    height: 90px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: url(../images/out_line.png) center center  repeat-x;
+}
+.aboutus_queen_center{
+    width: 600px;
+    margin: 0 auto;
+}
+.aboutus_picture1{
+    display: inherit;
+    height: 92px;
+    width: 92px;
+    background: url("../images/out_btn.png") no-repeat;
+}
+.aboutus_print1{
+    background-position: -125px 0;
+}
+.aboutus_print2{
+    background-position: -251px 0;
+}
+.aboutus_print3{
+    background-position: -378px 0;
+}
+.aboutus_print4{
+    background-position: -502px 0;
+}
+/*css3过渡*/
+.aboutus_transition{
+    opacity: 0;
+    background: url("../images/out_btn.png") no-repeat 0 -93px;
+    transition: opacity 2s;
+}
+.aboutus_transition2{
+    opacity: 0;
+    background: url("../images/out_btn.png") no-repeat -125px -93px;
+    transition: opacity 2s;
+}
+.aboutus_transition3{
+    opacity: 0;
+    background: url("../images/out_btn.png") no-repeat -251px -93px;
+    transition: opacity 2s;
+}
+.aboutus_transition4{
+    opacity: 0;
+    background: url("../images/out_btn.png") no-repeat -378px -93px;
+    transition: opacity 2s;
+}
+.aboutus_transition5{
+    opacity: 0;
+    background: url("../images/out_btn.png") no-repeat -502px -93px;
+    transition: opacity 2s;
+}
+/*CSS3hover类*/
+.aboutus_transition:hover{
+    opacity: 100;
+}
+.aboutus_transition2:hover{
+    opacity: 100;
+}
+.aboutus_transition3:hover{
+    opacity: 100;
+}
+.aboutus_transition4:hover{
+    opacity: 100;
+}
+.aboutus_transition5:hover{
+    opacity: 100;
+}
+
+/*注册时间*/
+.aboutus_copy{
+    width: 300px;
+    margin: 0 auto;
+}
+.aboutus_copy span{
+    color: rgb(146,190,36);
+}
+
+
+
+/*1.html部分的样式*/
+/*第二部分*/
+.aboutus_setting{
+    display: block;
+    display: inline;
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+.aboutus_setting1{
+    background: url("../images/aboutus_p_tool.png");
+    background-position: -48px 0;
+}
+.aboutus_setting2{
+    background: url("../images/aboutus_p_tool.png");
+    background-position: 0 -41px;
+}
+/*伪类*/
+.aboutus_setting1:hover{
+    background: url("../images/aboutus_p_tool.png");
+    background-position: -48px -41px;
+}
+.aboutus_pos3{
+    display: block;
+    width: 99px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: -5px;
+}
+.po1{
+    background: url("../images/aboutus_p_label.png") no-repeat;
+}
+.po4{
+    opacity: 0;
+    background: url("../images/aboutus_p_label.png") no-repeat 0 -49px;
+    transition:opacity 0.5s;
+    -web-transition:opacity 0.5s;
+}
+.po4:hover{
+    opacity: 100;
+}
+
+/*2.html部分的样式*/
+/*调动合作客户对其*/
+.aboutus_f3{
+    margin-right: 342px;
+}
+/*4.html部分的样式*/
+.po2{
+    background: url("../images/label.png");
+
+}
+.po3{
+    opacity: 0;
+    transition:opacity 0.5s;
+    -webkit-transition:opacity 0.5s;
+    background: url("../images/label.png") 0 -49px;
+}
+.po3:hover{
+    opacity: 100;
+}
+.aboutus_width{
+    width: 590px;
+    margin: 10px 10px 0 0;
+    line-height: 23px;
+    color: #808080;
+    font-size: 11px;
+    float: right;
+    display: inline;
+    text-align: left;
+}
+.aboutus_setting3{
+    background: url("../images/member_tool.png");
+    background-position: -48px 0;
+}
+.aboutus_setting4{
+    background: url("../images/member_tool.png");
+    background-position: 0 -41px;
+    margin-right: 10px;
+}
+/*css3伪类*/
+.aboutus_setting5{
+    position: absolute;
+    left: 885px;
+    float: right;
+    background: url("../images/member_tool.png");
+    background-position: -48px -41px;
+    opacity:0;
+    transition:opacity 0.5s ;
+}
+.aboutus_setting5:hover{
+    opacity: 100;
+}
+
+/*这是尾部*/
+#footer{
+    width: 100%;
+    height: 267px;
+    position: fixed;
+    left: 0px;
+    z-index: 9;
+    bottom: -278px;
+    transition: all 1s;
+    background: url(../images/bg_foot.png) center top no-repeat;
+}

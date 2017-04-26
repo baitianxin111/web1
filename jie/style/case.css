@@ -1,0 +1,654 @@
+@charset "utf-8";
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.case_bbox {
+	width: 100%;
+	background: url(../images/bg_body2.png) repeat-x #f2f2f2;
+}
+/*导航栏开始*/
+.case_box {
+	margin: 0 auto;
+	width: 100%;
+	height: 255px;
+	position: relative;
+}
+.case_box_con {
+	margin: 0 auto;
+	width: 1050px;
+	height: 235px;
+	border: 1px solid blue;
+	overflow: hidden;
+	position: absolute;
+	/*background: url(../images/bg_banner.jpg) no-repeat -110px 0px;*/
+}
+.case_nav {
+	width: 1050px;
+	margin: 0 auto;
+	height: 48px;
+	line-height: 63px;
+	/*position: fixed;*/
+	/*top: 0;
+	left: 0;*/
+	/*z-index: 9;*/
+	/*background: pink;*/
+}
+
+.case_nav_head ul{
+	list-style: none;
+	
+}
+.case_nav_head ul li {
+	 text-align: center;
+    line-height: 38px;
+    float: left;
+    display: inline;
+    /**/
+    margin-right: 32px;
+}
+.case_nav_head ul li a {
+	 height: 38px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.case_nav_head ul li a:hover{
+	 color:#BFF52C;
+    transition: color 2s;
+	
+}
+/*头部的导航栏*/
+
+
+/*导航栏处的logo*/
+.case_nav_logo_box{
+	  width:182px ;
+    height: 38px;
+    float: left;
+    overflow: hidden;
+    margin-top: 8px;
+    position: relative;
+	 
+}
+.case_nav_logo {
+	display: block;
+	width: 182px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	float: left; 
+	position: relative;
+	background: url(../images/logo.png) no-repeat 0 0;
+}
+.home_logoa_a{
+    width: 182px;
+    height: 35px;
+    display: block;
+    background: url(../images/logo.png) no-repeat  0px -38px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+
+/*右边的导航*/
+
+.case_nav_head {
+	margin: 0 auto;
+	text-align: left;
+	float: right;
+	height: 40px;
+	width: 484px;	 
+}
+
+.case_nav_head ul {
+	list-style: none;
+}
+
+.case_nav_head ul li {
+	float: left;
+}
+
+.csae_banner {
+	width: 1050px;
+	height: 200px;
+	/*padding-top: 106px;*/
+	position: relative;
+	top :50px;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	/*border: 1px solid yellow;*/
+}
+#wrapp{
+	position: relative;
+}
+ 
+ 
+/*背景banner图片注释的错误*/
+.home_banner_bg{
+	width: 1200px;
+	height: 220px;	 
+	position: absolute;	 
+	left: -210px;
+	top :-20px;
+	 
+	
+}
+.case_banner_title_box{
+ 	position: absolute;
+ }
+/*‘冰翼，突破传统领域’的标题*/
+ /*.case_banner_title {
+ 	width: 600px;
+	height: 60px;
+	line-height: 60px;
+	margin:0 auto;	
+	margin-top: 40px; 
+	text-align: center;
+	position: absolute;
+	 left: 217px;
+	border: 1px solid red;
+	
+}*/
+.case_header_con_title{
+	position: relative;
+	
+}
+.case_header_con_title img{
+	/*border: 1px solid red;*/
+	position: absolute;
+	top: -130px;
+	left: 690px;
+	/*top: 110px;*/
+}
+ 
+
+/*导航下边的定位location*/
+.case_nav_foot {
+	margin: auto;
+	text-align: left;
+	width: 935px;
+	height: 34px;	 
+}
+/*导航下部的小导航*/
+
+.case_nav_footer {
+	width: 100%;
+	height: 34px;
+	border-bottom: 1px solid #CCCCCC;
+	/*background: url(../images/bg_body.png) repeat-x  rgb(242,242,242);*/
+	/*border:  1px solid red;*/
+}
+
+.case_nav_foot ul {
+	list-style: none;
+}
+
+.case_nav_foot ul li {
+	float: left;
+	display: inline;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	margin-right: 18px;
+	padding-left: 9px;
+	background: url(../images/nav2_c.png) no-repeat 0px 15px;
+	left: center no-repeat;
+}
+
+.case_nav_foot ul .location {
+	padding-left: 11px;
+	background: url(../images/nav2_s.png)no-repeat 0px 10px;
+	left: center no-repeat;
+}
+
+.case_nav_foot ul li a {
+	text-decoration: none;
+}
+
+.case_nav_foot ul li a:hover {
+	color: green;
+}
+
+.case_nav_foot_r {
+	margin-top: 12px;
+	padding-right: 21px;
+	float: right;
+	display: inline;
+}
+
+#edu {
+	text-decoration: none;
+}
+
+.case_nav_foot_r a:hover {
+	color: green;
+}
+/*导航栏结束*/
+
+/*主体部分开始*/
+
+.case_body {
+	padding-bottom: 80px;
+	width: 1050px;
+	height: auto;	 
+	margin: 0 auto;
+	overflow: hidden;
+	/*border:  1px solid red;*/
+	 
+}
+
+.case_btn {
+	/*width: 979px;*/
+	height: 100px;
+	padding-left: 280px;
+	position: relative; 
+	text-align: center;
+	/*margin: 0 auto;*/
+	/*background: black;*/
+	/*border: 1px solid red;*/
+}
+
+
+/*4个按钮实现图片的随机播放*/
+ .case_btn_1{
+	width: 93px;
+	height: 65px;
+	position: absolute;
+	bottom: -12px;
+	/*background: url(../images/case_btn.png) no-repeat;*/
+	transition: height 1s;
+	-webkit-transition: height 1s;
+	-moz-transition: height; 1s ; 
+	
+}
+
+.case_btn1 {
+	background: url(../images/case_btn.png) no-repeat 0px 0px;
+	left: 270px;
+	 
+}
+
+.case_btn1:hover{
+ 	background-position-y: -100px !important;
+ 	height: 96px !important;
+}
+
+.case_btn2 {
+	background: url(../images/case_btn.png) no-repeat -104px 0px;
+	left: 374px;
+	 
+}
+
+.case_btn2:hover{
+ 	background-position-y: -100px !important;
+ 	height: 96px !important;
+ }
+
+.case_btn3 {
+	background: url(../images/case_btn.png) no-repeat -207px 0px;
+	left: 478px;
+	 
+}
+
+.case_btn3:hover{
+ 	background-position-y: -100px !important;
+ 	height: 96px !important;
+}
+
+.case_btn4 {
+	background: url(../images/case_btn.png) no-repeat -309px 0px;
+	left: 582px;
+	 
+}
+
+.case_btn4:hover{
+ 	background-position-y: -100px !important;
+ 	height: 96px !important;
+ }
+
+.case_con {
+	margin: auto;
+	text-align: left;
+	width: 935px;
+	height: auto;
+	/**/
+	/*border: 1px solid green;*/
+}
+
+
+/*下面4个方框*/
+
+.case_btn_split {
+	text-align: right;
+	background: url(../images/case_btn_split.png)center top no-repeat;
+	width: 935px;
+	height: 60px;
+	margin: 0 auto;
+	z-index: 2;
+	/*position: absolute;*/
+}
+
+.case_btn_split a {
+	width: 12px;
+	height: 12px;
+	float: right;
+	display: inline;
+	margin-left: 2px;
+	margin-top: 20px;
+}
+
+.btn1 {
+	background: url(../images/color_btn.png) -90px 0px;
+}
+
+.btn2 {
+	background: url(../images/color_btn.png)-75px 0px;
+}
+
+.btn3 {
+	background: url(../images/color_btn.png)-60px 0px;
+}
+
+.btn4 {
+	background: url(../images/color_btn.png)-46px 0px;
+}
+
+.btn5 {
+	background: url(../images/color_btn.png)-30px 0px;
+}
+
+.btn6 {
+	background: url(../images/color_btn.png) -14px 0px;
+}
+
+.btn7 {
+	background: url(../images/color_btn.png)0px 0px;
+}
+
+
+/*中间的产品图开始*/
+
+.case2 {
+	width: 935px;
+	height: auto;
+	overflow: hidden;
+	padding-top: 30px;
+}
+
+.case2_lin1 {
+	list-style: none;
+}
+
+.case2_lin1 li {
+	float: left;
+
+	width: 302px;
+	height: 188px; //xiugai
+	line-height: 188px;
+	margin-bottom: 30px;
+	margin-top: 0px;
+	text-align: center;
+	background: url(../images/bg_case_f.png) 0px 140px no-repeat;
+	margin-left: 8px;
+}
+
+
+/*.case_li1{
+	float: left;
+	width: 302px;
+	height: 188px;//xiugai
+	line-height: 188px;
+	margin-bottom: 30px;
+	margin-top: 0px;
+	text-align: center;
+	
+	background: url(../images/bg_case_f.png) 0px 140px no-repeat;
+	
+}*/
+
+/*.case2_lin1 li:last-child {
+	float: right;
+}*/
+
+.case2_lin1 li img {
+	padding-top: 18px;
+}
+
+
+/*链接里面的盒子与阴影*/
+
+.case_logo_box {
+	width: 935px;
+	height: 3552px;
+	margin-top: 0px;
+	/*padding-top: 50px;*/
+	border: 1px solid blue;
+	display: block;
+}
+
+.case_li1_box1 {
+	width: 302px;
+	/*height: 165px;*/
+	position: relative;
+	/*right: 200px;*/
+	height: 188px;
+	/*border: 1px solid red;*/
+	background: url(../images/bg_case.png) center center;
+	transition: margin-top 2s;
+}
+
+
+/*第一个盒子初始的放48个图片*/
+
+.case_initial_box {
+	width: 935px;
+	height: auto;
+	/*display: none;*/
+	/*border: 1px solid blueviolet;*/
+	 
+}
+
+ 
+/*第二个盒子放4个按钮的图片*/
+
+.case_btn_box {
+	width: 935px;
+	height: auto;
+	/*border: 1px solid yellow;*/
+	/*display: none;*/
+}
+
+
+/*第二个盒子放4个按钮的图片下面的盒子隐藏*/
+
+.case_btn_box_inter {
+	width: 935px;
+	height: auto;
+	display: none;
+}
+
+.case_btn_box_logo {
+	width: 935px;
+	height: auto;
+	display: none;
+}
+
+.case_btn_box_media {
+	width: 935px;
+	height: auto;
+	display: none;
+}
+
+.case_btn_box_web {
+	width: 935px;
+	height: auto;
+	display: none;
+}
+ 
+/*第三个盒子放7个方框链接的图片*/
+
+.case_link_box {
+	width: 935px;
+	height: auto;
+	/*border: 1px solid red;*/
+	/*display: none  ;*/
+}
+
+/*第三个盒子放7个方框链接的图片下面的盒子隐藏*/
+.case_link_div{
+display: none;
+} 
+ 
+/*蒙版*/
+
+.case_mask {
+	display: none;
+	width: 262px;
+	height: 145px;
+	/*background: pink;*/
+	/*border: 1px solid red;*/
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	background: rgba(134, 125, 122, 0.5);
+	 
+}
+
+//修改2个显示不出来的问题
+.case_li1_box1 {
+	display: block !important;
+}
+
+#case_div1 {
+	display: block !important;
+}
+
+#case_div2 {
+	display: block !important;
+}
+
+.case_li1_box1 a {
+	display: block;
+	width: 61px;
+	height: 61px;
+	line-height: 61px;
+	text-align: center;
+	margin-left: 120px;
+	margin-top: -158px;
+	position: absolute;
+	transition: margin-top 2s;
+	/*111*/
+	opacity: 0;    
+	background: url(../images/readmore-icon.png) no-repeat 0px 0px;
+}
+
+
+/*链接开始*/
+
+.case_out {
+	width: 100%;
+	/*background: red;*/
+	height: 92px;
+	padding: 20px;
+	
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	/*margin-top: 71px;*/
+	/*margin: 28px 0px 28px 0px  ;*/
+	/**/
+	background: url(../images/out_line.png) center center repeat-x;
+}
+
+.case_out_con {
+	width: 600px;
+	margin: 0 auto;	 
+	height: 92px;
+}
+
+.case_out_con a {
+	float: left;
+	/*display: block;*/
+	width: 92px;
+	height: 92px;
+	line-height: 92px;
+	text-align: center;
+	display: inline;
+	margin-right: 34px;
+}
+
+.case_out_con1 {
+	background: url(../images/out_btn.png) no-repeat ;
+
+}
+
+.case_out_con2 {
+	background: url(../images/out_btn.png) no-repeat -127px -1px;
+}
+
+.case_out_con3 {
+	background: url(../images/out_btn.png) no-repeat -250px -1px;
+}
+
+.case_out_con4 {
+	background: url(../images/out_btn.png) no-repeat -374px -1px;
+}
+
+.case_out_con5 {
+	background: url(../images/out_btn.png) no-repeat -498px 0px;
+	/*background-position-y: ;*/
+}
+ 
+.case_out_con a:last-child {
+	float: left;
+	width: 92px;
+	height: 92px;
+	line-height: 92px;
+	text-align: center;
+	display: inline;
+	margin-right: 0px;
+	/*background: url(../images/out_btn.png) no-repeat ;*/
+}
+
+/*权限开始*/
+
+.case_copy {
+	color: rgba(146, 146, 146);
+	width: 553px;
+	height: 16px;
+	margin: 0 auto;
+	/*border: 1px solid green;*/
+	line-height: 16px;
+	text-align: center;
+	padding-bottom: 240px;
+}
+
+.case_copy span {
+	color: lightgreen;
+}
+
+
+/*最底部的*/
+
+.case_footer {
+	width: 100%;
+	height: 267px;
+	margin: 0 auto;
+ 	position:fixed;
+ 	opacity: 0;
+  	/*display: none;*/
+    bottom:0;
+    left:0;
+    z-index: 16;
+	 transition: opacity;
+    -webkit-transition: opacity 2s;
+	/*border: 1px solid goldenrod;*/
+	background: url(../images/bg_foot.png)  center top no-repeat;
+}
+
+
+/*主体部分结束*/
