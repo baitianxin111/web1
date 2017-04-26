@@ -1,40 +1,189 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-			table,tr,td{
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			table,
+			tr,
+			td {
 				border: 1px solid #000000;
-				 background-color: #F2F2F2;
+				background-color: #2F4F4F;
+				margin: 0 auto;
 			}
-			td{
-				width: 10px;
-				height: 10px;
+			
+			td {
+				width: 20px;
+				height: 20px;
+				/*text-space-collapse: 0;*/
+				/*margin:  0 auto;*/
 			}
-			.red{
+			
+			.red {
 				background-color: red;
 			}
 		</style>
 	</head>
+
 	<body>
-		<table id="table" border="" cellspacing="" cellpadding="">
-			 
+		<table id="table" border="" cellspacing="0" cellpadding="">
+
 		</table>
 	</body>
 	<script>
-		var table=document.getElementById('table');
-		var maxTb=20;
-		var tbs=[];//为蛇身做准备
-		for (var i = 0; i < maxTb.length; i++) {
+		var table = document.getElementById('table');
+		var maxTb = 20; //最大表格数
+		var tbs = []; //为蛇身做准备
+		for (var i = 0; i < maxTb; i++) {
 			//生成行
-			var tr=document.createElement('tr');
-			  for(var j=0;j<maxTb.length;j++){
-			  	//生成列
-			  	var td=document.createElement('td');
-			  	tr.appendChild(td);
-			  }
-			  table.appendChild(tr);
+			var tr = document.createElement('tr');
+			var thisrowtr = []; //行的数组，以后都加到蛇身的数组去
+			for (var j = 0; j < maxTb; j++) {
+				//生成列
+				var td = document.createElement('td');
+				tr.appendChild(td);
+				thisrowtr.push(td); //
+			}
+			tbs.push(thisrowtr); //构成二维数组
+			table.appendChild(tr); //表格中添加单元格
 		}
+		console.log(tbs);
+		//开始做食物
+				function Food(){
+					this.food=[
+					{x:4,y:4}				
+					];
+				}
+		//开始画蛇,构造函数
+		function Snackk() {
+			this.snack = [{
+				x: 3,
+				y: 8
+			}, {
+				x: 3,
+				y: 7
+			}, {
+				x: 3,
+				y: 6
+			}, {
+				x: 3,
+				y: 5
+			}];
+			this.direction = 'right';
+			//把小蛇画出来		 
+			this.render();
+			this.move();
+			this.update();
+		}
+		//画食物
+				Food.prototype.foodrender=function(){
+					 for (var i=0;i<maxTb;i++) {
+					 	for(var j=0;j<maxTb;j++){
+					 		tbs[i][j].className="";		 		
+					 	}			 	
+					 }
+					 for (var j=0;j<this.food.length;j++) {			
+					tbs[this.food[i].x][this.food[i].y].className='yellow';
+						}
+				}
+		//光写运动小蛇不动，需要渲染一下,每一次运动都要清空一下表格里面的内容
+		Snackk.prototype.render = function() {
+				for (var i = 0; i < maxTb; i++) {
+					for (var j = 0; j < maxTb; j++) {
+						tbs[i][j].className = "";
+					}
+				}
+				for (var i = 0; i < this.snack.length; i++) {
+					tbs[this.snack[i].x][this.snack[i].y].className = 'red';
+				}
+			
+			}
+			//小蛇运动起来
+		Snackk.prototype.move = function() {
+				this.snack.pop();
+				switch (this.direction) {
+					case "up":
+						this.snack.unshift({
+							x: this.snack[0].x - 1,
+							y: this.snack[0].y
+						});
+						break;
+					case "right":
+						this.snack.unshift({
+							x: this.snack[0].x,
+							y: this.snack[0].y + 1
+						});
+						break;
+					case "down":
+						this.snack.unshift({
+							x: this.snack[0].x + 1,
+							y: this.snack[0].y
+						});
+						break;
+					case "left":
+						this.snack.unshift({
+							x: this.snack[0].x,
+							y: this.snack[0].y - 1
+						});
+						break;
+				}
+			}
+			//开始判断上下键来辨别方向
+		Snackk.prototype.update = function() {
+			
+			var self = this;
+			//获取事件的焦点
+			document.onkeydown = function(event) {
+				//			 	alert(11);
+				var event = event || window.event;
+				//			 var event=event|arguments[0];
+				switch (event.keyCode) {
+					
+					case 38:
+						if (self.direction == 'down') {
+							return;
+						}
+						self.direction = 'up';
+						break;
+					case 39:
+						if (self.direction == 'left') {
+							return;
+						}
+						self.direction = 'right';
+						break;
+					case 40:
+						if (self.direction == 'up') {
+							return;
+						}
+						self.direction = 'down';
+						break;
+					case 37:
+						if (self.direction == 'left') {
+							return;
+						}
+						self.direction = 'left';
+						break;
+					default:
+						break;
+				}
+			}
+		}
+		var s = new Snackk();
+		var timer1 = setInterval(function() {
+			s.move();
+			s.render();
+			s.update();
+		}, 1000);
+		var f=new Food();
+		var timer2=setInterval(function(){
+			 f.foodrender();
+		},1000)
 	</script>
+
 </html>
