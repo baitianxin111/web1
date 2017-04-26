@@ -8,18 +8,33 @@
 				border: 1px solid #000000;
 				 background-color: #F2F2F2;
 			}
-			tr,td{
+			td{
 				width: 10px;
 				height: 10px;
+			}
+			.red{
+				background-color: red;
 			}
 		</style>
 	</head>
 	<body>
-		<table border="" cellspacing="" cellpadding="">
+		<table id="table" border="" cellspacing="" cellpadding="">
 			 
 		</table>
 	</body>
 	<script>
-		
+		var table=document.getElementById('table');
+		var maxTb=20;
+		var tbs=[];//为蛇身做准备
+		for (var i = 0; i < maxTb.length; i++) {
+			//生成行
+			var tr=document.createElement('tr');
+			  for(var j=0;j<maxTb.length;j++){
+			  	//生成列
+			  	var td=document.createElement('td');
+			  	tr.appendChild(td);
+			  }
+			  table.appendChild(tr);
+		}
 	</script>
 </html>
