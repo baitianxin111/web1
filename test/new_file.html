@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		 
+ function People(name,age){
+			this.name=name;
+			this.age=age;
+ }
+function Kid(name,age,sex){
+this.sex=sex;
+			//console.log(this);
+			console.log(this.constructor);
+		this.constructor.apply(this,arguments);}
+Kid.prototype=new People('mary1',24,'nv')
+		 var g=new Kid('mary2',24,'nv');
+		 console.log(g.name);
+
+	</script>
+</html>

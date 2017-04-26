@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			div{
+				margin: 0 auto;
+			}
+			.one{
+				width: 600px;
+				height: 600px;
+				background: red;
+			}
+			.three{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+			}
+			.two{
+				width: 400px;
+				height: 400px;
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+	 
+		<div class="one" >
+			<div class="two" >
+				<div class="three" onclick="fun3()"></div>
+			</div>
+		</div>
+		
+		
+	 
+		
+	</body>
+	<script>
+	//阻止事件冒泡
+//	function fun(){
+//		var e=window.event||arguments[0]; 
+//		alert(this.className);
+//		if (e.stopPropagation) {
+//			e.stopPropagation();
+//		} else{
+//			e.cancelBubble=true;
+//			
+//		}
+//		
+//	}
+
+//	var oDiv=document.querySelectorAll('div');
+//	for (var i=0;i<oDiv.length;i++) {
+//		oDiv[i].addEventListener('click',fun)
+//		
+//	}
+	//thisy与src的区别
+//		function fun(){
+//			alert(this.className);
+//			//未定义
+//			
+//		}
+//		function fun1(){
+//			alert(this);
+//			//window对象
+//		}
+		function fun3(){
+			var src=event.srcElement||event.target;
+			alert(src.className);
+		}
+	</script>
+</html>

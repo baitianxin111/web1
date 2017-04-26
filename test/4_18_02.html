@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		 <button id="btn">开始运动</button>
+		<div>
+			
+		</div>
+	</body>
+	<script>
+		var oBtn=document.getElementById('btn');		 
+		 oBtn.addEventListener('click',move);
+		 	
+			function move(){
+				var oDiv=document.getElementsByTagName('div')[0];
+				var  speedX=8;//给出水平竖直方向的初速度
+				var  speedY=8;
+					
+				setInterval(function(){				
+					speedY+=3;//给出加速度	
+					var l=oDiv.offsetLeft+speedX;//把这个2个变量放在外面做全局变量，小球会一直在一个附近位置运动，获取的值一直是	24px,16px			
+		 			var t=oDiv.offsetTop+speedY;
+					
+					//判断边界，
+					if (l>document.documentElement.clientWidth-oDiv.offsetWidth) {
+						//如果大于他的屏幕边界，则让球往回跳
+						 speedX*=-0.8;
+						 l=document.documentElement.clientWidth-oDiv.offsetWidth;//最大边界
+						
+					} else if(l<=0){
+						speedX*=0.8;//
+						
+					}
+					if (t>document.documentElement.clientHeight-oDiv.offsetHeight) {
+						speedY*=-0.8;//同时给出X的位置类似于抛体运动
+						speedX*=0.8;
+						t=document.documentElement.clientHeight-oDiv.offsetHeight;//最大边界
+						
+					}else if(t<=0){
+						speedY*=-0.8;//Y方向为负数，效果类似弹跳效果
+						speedX*=0.8;
+						
+					}
+					oDiv.style.left=l+'px';	//给出定位才可以用left		 
+					oDiv.style.top=t+'px';				
+				},20);
+		
+			
+			
+			
+		}
+	</script>
+</html>

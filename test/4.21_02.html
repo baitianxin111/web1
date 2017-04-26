@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	//继承的第二种写法
+		function People(name,say,eat){
+			this.name='jack';
+			this.say='我天色还能够';
+			this.eat=eat;
+		}
+		function Stus(lol){
+			this.lol='回家爱打lol';
+//			People.call(this,name,say)
+		}
+		Stus.prototype=new People('erzi','tian sheng jicheng');//核心语句继承
+		xiaoming =new Stus('yuan lai zhen hao');
+		console.log(xiaoming.lol);
+//		console.log(xiaoming.say);//继承来自父亲的
+//		console.log(xiaoming)
+//		console.log(Stus.__proto__);
+//		console.log(Stus.prototype);
+console.log(xiaoming.eat);
+
+	</script>
+</html>

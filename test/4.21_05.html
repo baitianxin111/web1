@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function People(eat,say){
+			this.eat=eat;
+			this.say=say;
+		}
+		People.prototype.xingzou='我天生会行走';
+		function Son(lol){
+			this.lol=lol;
+		}
+		Son.prototype=new People('我天生会吃饭','天气下雨');
+		xiaoming =new Son('喜爱那个回家');
+		console.log(xiaoming.eat);
+		console.log(xiaoming.say);
+		console.log(xiaoming);
+		console.log(xiaoming.xingzou);
+	</script>
+</html>

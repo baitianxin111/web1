@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html{
+				font-size: 50px;
+			}
+			.con{
+				/*50*1.5=75px*/
+				width: 1.5rem;
+				height: 1.5rem;
+				line-height: 1.5rem;
+				border: 1px solid #CCCCFF;
+				background: #007CD6;
+				text-align: center;
+				 float: left;
+				 cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		function lmBtn(less,more,dom){
+			//初始化界面创建元素
+			this.less=less;
+			this.more=more;
+			//初始化
+			this.initNum=0;
+			this.init=function(){
+			var oDiv=document.createElement('div');
+			var oLessBtn=document.createElement('p');
+			var oMoreBtn=document.createElement('p');
+			var oNum=document.createElement('p');
+ 			//匹配类名
+			oLessBtn.className ='con';
+			oMoreBtn.className='con';
+			oNum.className='con';
+			oLessBtn.textContent="-";
+			
+			oNum.textContent=this.initNum;
+			oMoreBtn.textContent="+";
+			//添加上去
+			 oDiv.appendChild(oLessBtn);
+			 oDiv.appendChild(oNum);
+			 oDiv.appendChild(oMoreBtn);
+			 //添加到dom
+			 dom.appendChild(oDiv);
+			  //写点击加号数字增加函数
+			 var self=this;//否则是未定义
+			 oMoreBtn.onclick=function(){			 	
+			 	 //在定义一个变量
+			 	if (self.initNum==   self.more) {
+			 		self.initNum= self.more-1;
+			 		console.log(self.initNum);	 		
+			 	}
+			 	
+			 	oNum.textContent=++self.initNum;
+			 } 
+			 oLessBtn.onclick=function(){			 	 
+			 	if (self.initNum==self.less) {
+			 		 self.initNum=self.less+1;
+			 		 console.log(self.initNum);		 		
+			 	}
+			 	oNum.textContent=--self.initNum;
+			 }
+				
+			}
+			this.init();		
+		}		 
+		var btn=new lmBtn(0,5,document.body);
+	</script>
+</html>

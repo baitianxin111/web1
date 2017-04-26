@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="div1" >
+		
+	</div>
+	</body>
+	<script>
+		var xiaoming={
+			name:'zhangsan',
+			age:12,
+			sex:'man',
+			stark: fun1
+		
+		};
+		
+		function fun1(){
+			alert(this);
+		}
+//		xiaoming.stark();//object对象的
+		function fun2(){
+			alert(this.name);
+			alert(this.sex);
+		}
+//		fun2();//未定义的
+//		 fun2.call(xiaoming);//强行获取到this的对象
+//		fun2.apply(xiaoming);//强行获取到this的对象
+ 		function fun3 (a,b,c) {
+ 			alert(this.name);
+			alert(this.sex);
+			alert(xiaoming.name='wangwu');
+			
+			console.log(a+b+c);
+ 			
+ 		}
+// 		fun3.apply(xiaoming,[1,2,3]);//外面函数怎样获取到this,进行对对象的操作
+   		fun3.call(xiaoming,1,2,3);
+//		fun1();//window对象的
+//		var oDiv=document.getElementById('div1');
+//		oDiv.onclick= fun1();//html对象的
+////    setInterval(fun1,10);
+			
+		
+		
+	</script>
+</html>

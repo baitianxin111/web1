@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var obj={
+			a : "canlaoshi",
+			b : "xiaobai",
+			c : "zhoujielun"
+		}
+		obj.__proto__={
+			d : 5
+		}
+		 Object.prototype.f="tianhaiyi";
+		console.log(obj.hasOwnProperty("a"));
+		console.log(obj.hasOwnProperty("b"));
+		console.log(obj.hasOwnProperty("c"));
+		console.log(obj.hasOwnProperty("d"));
+		console.log(obj.hasOwnProperty("f"));
+		for (var k in obj) {
+			obj.hasOwnProperty(k) && console.log("自己身上的属性"+k+'------'+obj[k]);
+			
+		}
+	</script>
+</html>

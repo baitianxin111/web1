@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var reg1=/\s?/;
+		console.log(reg1.test('sd fgvd'));
+		var reg2=/\s+/;
+		console.log(reg2.test('sdsf'));
+		//出现零此或多次包含零次
+		var reg3=/\s*/;
+		console.log(reg3.test('asfdsf'));
+		var reg4=/s{2,4}/;
+		console.log(reg4.test("jj"));//false
+		console.log(reg4.test("jj"));//false
+	</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			input{
+				/*margin: 100px;*/
+			}
+			#btn1{
+				width: 80px;
+			}
+			div{
+				width: 80px;
+				height: 200px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="">
+			<input id="text1" type="text" placeholder="请输入手机号码" />
+		<input type="text" id="text2" placeholder="请输入手机邮箱" />
+		<input type="button" id="btn1" value="确定" />
+		<!--<input type="button" id="btn2" value="确定" />-->
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+	var oBtn=document.getElementById('btn1');
+	var oText1=document.getElementById('text1');
+	var oText2=document.getElementById('text2');
+	var reg1=/^1[34578]\d{9}$/;
+	 var reg2=/^\w+@\w+\.[a-z]{2,4}$/;
+	oBtn.onclick=function(){
+		var v1=oText1.value;
+		var v2=oText2.value;
+			if(reg1.test(v1)&&reg2.test(v2)){
+				alert("恭喜你，验证成功！")			
+		} else{
+			alert('请重新输入')
+			
+		}
+	}
+		
+	
+//     alert(!(/\d/.test(demo)));
+	</script>
+</html>

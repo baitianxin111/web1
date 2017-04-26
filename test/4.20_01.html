@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		function Wangzhe(name,propety,dialogue){
+			this.name=name;
+			this.prototype=propety;
+			this.dialogue=dialogue;
+//			this.say=function(){
+//				alert(this.dialogue);
+//			}
+			this.say=new Function('alert(this.dialogue);');
+				
+			
+		}//这样写的方式同上面一样的结果
+		var houyi=new Wangzhe('hpuyi','sheshou','my propety is sheshou!');
+		var fashi=new Wangzhe('fashimingzi ','fashi','my propety is fashi!');
+//		alert(houyi);
+//		alert(fashi);
+//		console.log(houyi);
+//		console.log(fashi);
+//		console.log(fashi.say());
+//		console.log(houyi.say());
+		console.log(houyi.say()==fashi.say());//true
+		console.log(houyi.say==fashi.say);//false每次new个对象都会重新申请空间，所以2个函数式不一样的
+	</script>
+</html>

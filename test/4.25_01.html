@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		var pattern=/d$/;
+//		console.log(typeof pattern);
+//		console.log( pattern.constructor);
+//	var str="a b  c";
+//	console.log(str.split(' '));
+//	console.log(str.split(/\s+/));//\s表示空白字符 +表示出现一次或多次至少出现一次
+//	var str1="aabbss kklll aafsdfsdasdsfsafff";
+//	console.log(str.split(/\a+/));
+// 		var str='abcde';
+// 		console.log(str.search('cd'));
+// 		console.log(str.search(/cd/));
+// 		console.log(str.search(/ff/));
+// 		var str1 ="bbaaccddffggttssaaggaaooaaj";
+// 		console.log(str1.split(/a+/));
+// 		var str2="a b    c";
+// 		console.log(str2.split(/a+/));
+// 		var str3="abbccddffggkkkbbooeebbppppadcs";
+// 		console.log(str3.match(/bb/g));
+		var str4='xiaoming回家看小电影,小电影很好看';
+		console.log(str4.match(/小电影/g));
+		console.log(str4.match(/小电影/));
+		var str5="xiaoming杂货那个在看人民的名义";
+		console.log(str5.replace('人民的名义','新闻联播'));
+		console.log(str5.replace(/人民的名义/,'新闻联播'));
+		console.log(str5.replace(/人民的名义/,function(){
+			return '前端学习手册';
+		}));
+		     // 它是正则对象的一个方法
+        //   他表示该字符串是否匹配我们的规则
+        //   返回 布尔值 如果匹配到 就返回true
+        //   如果没匹配到就返回 false
+		var demo = prompt('buzhui');
+		alert(!(/\s/.test(demo)));
+		var str6="aaccvvfggabcjjkkabcllll";
+		 var reg=/abc/g;
+		 
+		 var reg2=new RegExp('abc','g');
+//		 console.log(reg.exec(str6));
+		 console.log(reg2.exec(str6));
+	</script>
+</html>

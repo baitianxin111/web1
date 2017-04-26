@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--回到顶部的联系-->
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				 padding: 0;			 
+			}
+			#section{
+				position: fixed;
+				right: 50px;
+				bottom: 50px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		 <section id="section">回到顶部</section>
+		 <div style="height: 5000px;"></div>
+	</body>
+	<script>
+		var sec=document.getElementById('section');
+		window.onscroll=function(){
+			var scrolltop=document.body.scrollTop+document.documentElement.scrollTop;
+			console.log(scrolltop);
+			if(scrolltop>500){
+				sec.style.display='block';
+				
+			}
+			sec.onclick=function(){
+//				document.documentElement.scrollTo=0;
+				document.body.scrollTop=0;
+				sec.style.display='none'
+			}
+		}
+	</script>
+</html>

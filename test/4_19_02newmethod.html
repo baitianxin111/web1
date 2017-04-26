@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var xiaoming={
+			name:"zahngsan",
+			age:13,
+			sex:'man',
+			play:'lol',
+			sayhello:function(){
+				alert("hello my name is  "+this.name);
+				alert("this year "+this.age);
+				alert("my is a "+this.sex);
+			},
+			zhangda:function(){
+				this.age++;
+				alert(" this is index "+this.age);
+			},
+ 			bianxing:function(){
+ 				if (this.sex=='man') {
+ 				this.sex='woman';
+ 					
+ 				} else{
+ 				this.sex='man';
+ 					
+ 				}
+ 			}
+		};
+		xiaoming.sayhello();
+		xiaoming.zhangda();
+		xiaoming.zhangda();
+		xiaoming.zhangda();
+		xiaoming.bianxing();
+	</script>
+</html>

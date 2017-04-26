@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0 auto;
+			padding: 0;
+		}
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+			}
+			#box{
+				width: 290px;
+				height: 157px;
+				position: relative;
+				margin: 0 auto;
+				border: 1px solid red;
+				overflow: hidden;
+			}
+			#out{
+				width:1160px ;
+				height: 157px;
+			}
+		 
+			#btn{
+				position: absolute;
+				top: 90%;
+				left: 50%;
+			}
+			#btn li{
+				cursor: pointer;
+				width: 10px;
+				height: 10px;
+				text-align: center;
+				margin-left: 3px;
+				line-height: 10px;
+				background: rgba(0,0,0,0.5);
+			}
+			p{
+				cursor: pointer;
+				width: 15px;
+				height: 30px;
+				background: rgba(0,0,0,0.5);
+				position: absolute;
+				
+			}
+			#next{
+				top: 50%;			
+			}
+			#back{
+				top: 50%;
+				right: 0;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="out" style="transition: all 2s">
+				<li><img src="img/aboutus_member2.png"/></li>
+				<li><img src="img/aboutus_member3.png"/></li>
+				<li><img src="img/aboutus_member4.png"/></li>
+				<li><img src="img/aboutus_member2.png"/></li>
+			</ul>
+			<ul id="btn">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>				 
+			</ul>
+			<p id="next">&lt;</p>
+			<p id="back"> &gt;</p>
+		</div>
+	</body>
+	<script>
+		var oOut=document.getElementById('box');
+		var changePage=document.getElementsByClassName('p');
+		var oUl=document.getElementById('out');
+		var oBtns=document.getElementById('btn').getElementsByTagName('li');
+		change(oOut,oUl,oBtns,changePage,2000,290);
+		function change(oOut,oUl,oBtns,changePage,duration,btnwidth){
+			var page=0;
+			var timer1;
+			var maxPage=oBtns.length;
+			var time=setInterval(move,duration);
+			function move () {
+				page++;
+				if (page>maxPage) {
+					page=0;
+					oUl.style.transition='';
+					oUl.style.marginLeft='0';
+					timer1=setTimeout(function(){
+						page++;
+						oUl.style.transition='all 2s';
+						oUl.style.marginLeft=page*(-btnwidth)+'px';
+					
+					},10);										
+				}  
+				
+				oUl.style.marginLeft=page*(-btnwidth)+'px';				
+			}
+			 oOut.onmousemove=function(){
+			 	changePage[0].style.display='block';
+			 	changePage[1].style.display='block';
+			 }
+			 
+			 oOut.onmouseout=function(){
+			 	changePage[0].style.display='none';
+			 	changePage[1].style.display='none';
+			 }
+			 changePage[0].onclick=function(){
+			 	 page--;
+			 	 if (page<0) {
+			 	 	page=maxPage;
+			 	 	oUl.style.transition='';
+			 	 	oUl.style.marginLeft=page*(-btnwidth)+'px';	
+			 	 	timer1=setTimeout(function  () {
+			 	 		page--;
+			 	 		oUl.style.transition='all 2s';
+			 	 		oUl.style.marginLeft=page*(-btnwidth)+'px';	
+			 	 		
+			 	 		
+			 	 	},10);
+			 	 	
+			 	 }  
+			 	 oUl.style.marginLeft=page*(-btnwidth)+'px';	
+			 }
+			 changePage[1].onclick=function(){
+			 	move();
+			 }
+			 for(var i=0;i<oBtns.length;i++){
+			 	oBtns[i].index=i;
+			 	oBtns[i].onclick=function(){
+			 		page=this.index;
+			 		oUl.style.marginLeft=page*(-btnwidth)+'px';
+			 	}
+			 	
+			 }
+			 
+			
+		}
+	</script>
+</html>

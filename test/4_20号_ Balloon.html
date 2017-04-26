@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.ballon{
+				width: 96px;
+				height: 117px;
+				position: absolute;
+				background: url(img/ballon.png) no-repeat;
+				top: 50px;
+				left: 100px;
+				
+			}
+			body{
+				width: 100%;
+				height:100%;
+				background: url(img/0.jpg) no-repeat;
+				background-size: cover;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h>分数：0</h>
+	</body>
+	<script type="text/javascript">
+	var sum=0;
+	var oH=document.getElementsByTagName('h')[0];
+		function Ballon(){
+			this.left=Math.random()*600+10;
+			this.top=500;
+			this.score=parseInt(Math.random()*7)+1;//[1,8)
+			this.init();
+			this.fly();
+			this.click();
+ 
+			
+			
+		}
+		//原型函数的写法好处对象调用时节省空间
+		 Ballon.prototype.init=function(){
+		 	this.dom=document.createElement('div');
+		 	this.dom.className='ballon';
+			document.body.appendChild(this.dom);//创建div对象			
+			this.x=-(this.score-1)%4*96;
+			this.y=-parseInt(this.score/4)*120;
+			this.dom.style.backgroundPosition=this.x+"px "+this.y+"px";
+			}
+		 	
+		 //让气球飞起来
+		 Ballon.prototype.fly=function(){
+		 	var self=this;
+		 	var timer=setInterval(function(){
+		 		self.left++;
+				self.top-=self.score;
+				self.dom.style.left=self.left+'px';			 
+				self.dom.style.top=self.top+'px';
+		 		
+		 	},20);
+		 	}
+ 
+		 //让气球点击就消失，并且累计分数		 
+	 	Ballon.prototype.click=function(){ 		 
+	 		 var self=this;
+		 	 self.dom.onclick=function(){
+		 	 self.dom.style.display='none';	
+		 	 oH.innerHTML+=self.score;
+//		 	  sum+= oH.innerHTML;
+//		 	  alert(sum);	 	  	 			
+		 	}	 	
+   }
+	  
+		 setInterval(function(){
+		 	var fly=new Ballon();
+		 	 fly=Math.random()*10+1;
+		 	 
+		 	 
+		 },1000);
+	</script>
+</html>

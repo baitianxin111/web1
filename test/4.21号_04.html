@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	//查找i过程构造函数中没有属性就在它的原型函数中找方法属性，
+	//	构造函数中有属性，则用构造函数的属性，
+	//就不用原型函数的方法，属性了，原型函数是备用的
+		function People(eat,say){
+			this.eat=eat;
+			this.say=say;
+			
+		}
+		People.prototype.xingzou='我天生会行走';
+		function Stu(lol){
+			this.lol=lol;
+		}
+		Stu.prototype=new People('stark','真失望');
+		Stu.prototype.name='zhangsan';
+		Stu.prototype.xingzou="我改写了父类"
+		xiaoming=new Stu('放学回家到lol');
+		console.log(xiaoming.xingzou);
+	</script>
+</html>

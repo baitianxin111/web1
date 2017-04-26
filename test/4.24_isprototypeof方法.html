@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Car(){
+			
+		}
+		function Bmw(){
+			
+		}
+		Bmw.prototype=new Car();
+		var X4=new Bmw();
+//		console.log(X4 instanceof Bmw);
+//		console.log(X4 instanceof Car);
+		console.log(Bmw.prototype.isPrototypeOf(X4));
+		 
+	</script>
+</html>

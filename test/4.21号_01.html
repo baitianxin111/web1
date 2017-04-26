@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//继承的第一种写法
+		function People(name,age){
+			this.name=name;
+			this.age=age;
+		}
+		People.prototype.id=10;
+		function Kid(name,age,sex){
+			console.log(this);
+			People.apply(this,[name,age]);//this 指代的是当前kid 的里面的
+			this.sex=sex;
+			
+		}
+//		var g=new People()
+		var g=new Kid('mary',24,'nv');
+ 
+		console.log(g);
+		console.log(g.name);//获取到的是父类的name 属性
+		
+	</script>
+</html>

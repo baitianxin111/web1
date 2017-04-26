@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	//一般函数的写法
+		function  createPerson(name,age,sex){
+			var person=new Object();
+			person.name=name;
+			person.age=age;
+			person.sex=sex;
+			return person	;					
+		}
+		var person1= createPerson("jack",12,"man");//调用函数
+		console.log(person1);
+		//构造函数的写法
+		function CreatePerson(name,age,sex)
+		{
+			this.name=name;//this指向这个创建的空对象
+			this.age=age;
+			this.sex=sex;
+			if(this.age>=18){
+				this.status='adult';
+			}
+			else{
+				this.status='unadult';
+				
+			}
+		}
+		var person1=new CreatePerson('rose',20,'woman');
+		console.log(person1);
+		console.log(person1.name);
+		console.log(person1.status);
+	</script>
+</html>

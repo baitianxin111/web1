@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	// 对象打点调用属性，我们之前讲过，遍历原型链。
+    // 作用：可以看出属性是否是在自己身上，原型链上，如果在就返回改值，
+    // 如果不在就返回 undefined
+    //
+    // 有个坑，就是 当你在 obj.f 设置 值 为undefined，返回的就是undefined，
+    // 就不知道该属性到底存不存在了
+	<script type="text/javascript">
+		var obj={
+			a : "zhagsan",
+			b : "wangwu",
+			c : "zhaoliu",
+			f : "underfind"
+		}
+		obj.__proto__={
+			d : "xiaobai"
+		}
+		console.log(obj.a);
+		console.log(obj.b);
+		console.log(obj.c);
+		console.log(obj.d);
+		console.log(obj.f);
+//		console.log(obj.a);
+	</script>
+</html>

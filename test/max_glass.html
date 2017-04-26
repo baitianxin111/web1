@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+			
+		}
+			#max{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				background: plum;
+				opacity: 0.3;
+				top: 0;
+				display: none;
+				
+			}
+			#demo{
+				width: 170px;
+				height: 170px;
+				border: 1px solid blue;
+				
+			}
+			#glass{
+				position: absolute;
+				width: 170px;
+				height: 170px;
+				top: 0;
+				left: 180px;
+				display: none;
+				border: 1px solid blue;
+				background: url(img/shirt_3_big.jpg) no-repeat;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo"><img src="img/shirt_3.jpg" alt="" />
+				<div id="max"></div>
+		</div>
+		
+		<div id="glass"> </div>
+	</body>
+	<script>
+		 var oDiv=document.getElementById('demo');
+		 var oMax=document.getElementById('max');
+		 var oGlass=document.getElementById('glass');
+		 oDiv.onmouseover=function(){
+		 	oMax.style.display='block';
+		 	oGlass.style.display='block';
+		 }
+		 oDiv.onmouseout=function(){
+		 	oMax.style.display='none';
+		 	oGlass.style.display='none';
+		 	
+		 }
+		 oDiv.onmousemove=function(){
+		 	var e=event||arguments[0];
+		 	var x=e.clientX-oDiv.offsetLeft-oMax.offsetWidth/2;
+		 	var y=e.clientY-oDiv.offsetTop-oMax.offsetHeight/2;
+		 	if (x<=0) {
+		 		oMax.style.left=0+'px';
+		 		
+		 	} else if(x>=oDiv.offsetWidth-oMax.offsetWidth){
+		 		oMax.style.left=oDiv.offsetWidth-oMax.offsetWidth+'px';
+		 		
+		 	}else{
+		 		oMax.style.left=x+'px';
+		 		
+		 	}
+		 	if (y<=0) {
+		 		oMax.style.top=0+'px';
+		 		
+		 	} else if(y>=oDiv.offsetHeight-oMax.offsetHeight){
+		 		oMax.style.top=oDiv.offsetHeight-oMax.offsetHeight+'px';
+		 		
+		 	}else{
+		 		 oMax.style.top=y+'px';
+		 		
+		 	}
+ 
+		 	 var w=400/170;
+		 	 var h=400/170;
+		 	 oGlass.style.backgroundPosition=w*(-oMax.offsetLeft)+'px'+" "+h*(-oMax.offsetTop)+'px';
+		 	
+		 	
+		 }
+		 
+			 
+		 
+	</script>
+</html>

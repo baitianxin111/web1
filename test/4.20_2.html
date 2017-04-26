@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function Wang(name,propety,say){
+			this.name=name;
+			this.propety=propety;
+			this.say=say;
+			
+		}
+		Wang.prototype.name='anqila';
+		Wang.prototype.say='my name is ddd';
+		var  aaa=new Wang('fashi','fssanf','my name is..');
+//		console.log(aaa.name);
+//		console.log(Wang.prototype);
+//		console.log(aaa.__proto__);//
+//		console.log(aaa.__proto__==Wang.prototype);	//true
+//		console.log(aaa.__proto__.__proto__);//object的prototype
+//		console.log(Wang.prototype.constructor);//指回去了Wang 这个函数
+	 
+		console.log(aaa.__proto__.__proto__.constructor);//object这个函数
+	  
+//		console.log(wang.prototype);
+//		console.log(typeof wang.prototype);
+	</script>
+</html>

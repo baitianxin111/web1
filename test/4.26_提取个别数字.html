@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	var str1="jingtiariqishi2017niaan4yue26hao"//提取出数字出来
+		String.prototype.tiqu=function(){
+			return this.replace(/\D+/g,"");			
+		}
+		console.log('=========');
+		console.log(str1.tiqu());
+		var temp='';
+		//一般用法
+		function fundNum(str){
+			for (var i = 0; i < str.length; i++) {
+				if (str.charAt(i)<='9'&&str.charAt(i)>=0) {
+					console.log(str.charAt(i));
+					temp+=str.charAt(i);
+				
+			}  
+			}
+			return temp;
+			
+		}
+		console.log('=========');
+		console.log(fundNum(str1));
+		//正则用法
+		function find(str){
+			return str.match(/\d+/g).join();//2017,4,26
+//			return str.match(/\d+/g);//一个一个的字符串
+			return str.match(/\d+/g).join('');	//2017426
+			
+		}
+		console.log('=========');
+		console.log(find(str1));
+	</script>
+</html>

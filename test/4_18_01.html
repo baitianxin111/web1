@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 10px;
+				height: 10px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+	<script>
+		document.onmousemove=function(){
+			var e=event||arguments[0];
+			var oDiv=document.getElementsByTagName('div');
+			var num=0;
+				 var timer=setInterval(function(){
+				 	if (num==oDiv.length) {
+				 		clearInterval(timer);
+				 		return;
+				 	}
+				 	else{
+				
+				oDiv[num].style.left=e.clientX-10+'px';
+				oDiv[num].style.top=e.clientY-10+'px';
+				num++;
+				 		 		
+				 	}
+				 },10);
+				
+			
+		}
+	</script>
+</html>

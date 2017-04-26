@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 72px;
+				height: 135px;
+				background: url(img/run.png )no-repeat 0px -265px;
+				position: absolute;
+				top: 100px;
+				left: 0;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		 
+	</body>
+	<script>
+	function runman(left,top){
+		this.left=left;
+		this.top=top;
+		this.dom=document.createElement('div');
+		document.body.appendChild(this.dom);
+		this.dom.style.left=this.left+'px';
+		this.dom.style.top=this.top+'px';
+		this.sports=function(){			 
+			var self=this;
+			self.foot=1;
+			//定时器里面的this指向的是windiw
+			var timer1=setInterval(function(){
+				self.foot++;
+				self.left++;
+   				if (self.foot>=7) {
+   					self.foot=0;				
+   				}
+   				self.dom.style.left=self.left+'px';
+   				self.dom.style.backgroundPosition=-self.foot*63+"px -265px";
+   				if (self.left>500) {
+					self.die();
+				}
+			},200);			
+				
+			}
+		this.sports();//在里面执行的
+		this.die=function(){
+			clearInterval(this.timer1);
+			document.body.removeChild(this.dom);	
+		}
+		
+   	   }
+		
+	
+//	 var run1=new runman(100,100); 
+	 setInterval(function(){
+	 	new runman(Math.random()*300,Math.random()*300)
+	 },200)
+ 
+ 
+ 
+	</script>
+</html>

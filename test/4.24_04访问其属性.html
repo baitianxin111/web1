@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	// 在读取访问器属性时，会调用 getter 函数，这个函数负责返回有效的值；
+      // 在写入访问器属性时，会调用 setter 函数并传入新值，
+      // 这个函数负责决定如何处理数据。
+	<script type="text/javascript">
+		var person={
+			name: 'rose',
+			get age(){
+				if(this._age>19){
+					return "就是"+this._age;
+					
+				}
+				else
+				{
+					return "真有眼光"+this._age;
+				}
+			},
+			set age(val)
+			{
+				this._age=val;
+			}
+		}
+		person.age=13;
+		console.log(person.age);
+	</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var par=/d$/;
+		console.log(typeof par);
+		console.log(par.constructor);
+ 		var str1='a b   c';
+ 		console.log('---------');
+ 		console.log(str1.split(/\s+/));
+ 		console.log('---------');
+ 		var str2 = "bbaaccdddddaeeadaseeeef";
+        console.log(str2.split(/a+/));
+        var str3 = 'abcdser';
+        console.log('---------');
+        console.log(str2.indexOf('cd'));
+        console.log(str2.search('cd'));
+        console.log(str2.search(/cd/));
+         console.log('---------');
+        var str4='abcdefig'.replace(/ab(cd)e(fi)g/,function(match,$1,$2){
+        	return 'ab'+$1+'----'+$2+'---'+$1;
+        })
+        console.log(str4);
+         console.log('---------');
+         var str5="aaaasdgfdgdfabclllll";
+         var reg1=new RegExp('abc','g');
+         var reg2=new RegExp('lll','g');
+         console.log(reg1.exec(str5));
+         console.log(reg1.lastIndex);
+         console.log('---------');
+        console.log(reg2.exec(str5));
+        console.log(reg2.lastIndex);
+        var str6='hello rose';
+        var reg3=/hello/;
+         console.log('---------');
+        console.log(reg3.test(str6));
+//      var demo = prompt('不准输入空格！');
+//      alert(!(/\s/.test(demo)));
+        var reg4 = /[^abc]/;
+         console.log('---------');
+        console.log(reg4.test('abc'));
+ 		var reg5=/\D/;
+ 		 console.log('---------');
+ 		console.log(reg5.test('sfdg'));
+ 		var reg6=/\s?/;
+ 		console.log(reg6.test("rose"));
+ 		var reg7=/a+/;
+ 		console.log('---------');
+ 		console.log(reg7.exec('aaab'));
+ 		var reg8=/a+?/;
+ 		console.log(reg8.exec('aaab'));
+	</script>
+</html>

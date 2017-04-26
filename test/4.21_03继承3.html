@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//继承的第三种写法
+		function People(name,age){
+			this.name=name;
+			this.age=age;
+			 
+		}
+//		People.prototype.id=10;
+
+		function Kid(name,age,sex){
+//			console.log(this);
+//			console.log(this.constructor);
+//			this.constructor.apply(this,arguments);
+//			this.constructor.apply(this,[name,age]);//第二步优化this 指代的是当前kid 的里面的
+			People.apply(this,[name,age]);//第一步优化this 指代的是当前kid 的里面的
+			this.sex=sex;
+			
+		}
+		 Kid.prototype=new People('mary',24,'nv')
+		 var g=new Kid('mary',24,'nv');
+		 console.log(g.name);
+		 console.log(g.age);
+		
+	</script>
+</html>
