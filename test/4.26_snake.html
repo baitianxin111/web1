@@ -53,13 +53,9 @@
 			tbs.push(thisrowtr); //构成二维数组
 			table.appendChild(tr); //表格中添加单元格
 		}
-		console.log(tbs);
+//		console.log(tbs);
 		//开始做食物
-				function Food(){
-					this.food=[
-					{x:4,y:4}				
-					];
-				}
+				 
 		//开始画蛇,构造函数
 		function Snackk() {
 			this.snack = [{
@@ -75,6 +71,11 @@
 				x: 3,
 				y: 5
 			}];
+			this.food=[
+			{x:parseInt(Math.random()*15),
+			 y:parseInt(Math.random()*15)
+				
+			}];
 			this.direction = 'right';
 			//把小蛇画出来		 
 			this.render();
@@ -82,16 +83,20 @@
 			this.update();
 		}
 		//画食物
-				Food.prototype.foodrender=function(){
-					 for (var i=0;i<maxTb;i++) {
-					 	for(var j=0;j<maxTb;j++){
-					 		tbs[i][j].className="";		 		
-					 	}			 	
-					 }
-					 for (var j=0;j<this.food.length;j++) {			
-					tbs[this.food[i].x][this.food[i].y].className='yellow';
-						}
-				}
+//				Food.prototype.foodrender=function(){
+//					 for (var i=0;i<maxTb;i++) {
+//					 	for(var j=0;j<maxTb;j++){
+//					 		tbs[i][j].className="";		 		
+//					 	}			 	
+//					 }
+//					 for (var j=0;j< this.food.length;j++) {			
+//					tbs[this.food[j].l][this.food[j].m].className='yellow';
+//						}
+//				}
+				//食物开始变化位置
+//				Food.prototype.foodmove=function(){
+//					
+//				}
 		//光写运动小蛇不动，需要渲染一下,每一次运动都要清空一下表格里面的内容
 		Snackk.prototype.render = function() {
 				for (var i = 0; i < maxTb; i++) {
@@ -180,10 +185,11 @@
 			s.render();
 			s.update();
 		}, 1000);
-		var f=new Food();
-		var timer2=setInterval(function(){
-			 f.foodrender();
-		},1000)
+//		var f=new Food();
+//		var timer2=setInterval(function(){
+////				s.move();
+//			 f.foodrender();
+//		},1000)
 	</script>
 
 </html>
