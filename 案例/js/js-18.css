@@ -1,0 +1,32 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav{
+    width: 400px;
+    height: 30px;
+    margin: 100px auto 0;
+    border: 1px solid #ccc;
+}
+#nav li{
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+#nav .content{
+    width: 400px;
+    height: 120px;
+    background: #ccc;
+    float: left;
+    display: none;
+}
+#nav .first{
+    display: block;
+}
